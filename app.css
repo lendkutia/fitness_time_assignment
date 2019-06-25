@@ -45,13 +45,13 @@ textarea {
 }
 html {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
 }
 *,
 *:before,
 *:after {
   -webkit-box-sizing: inherit;
-  box-sizing: inherit;
+          box-sizing: inherit;
 }
 img,
 video {
@@ -151,7 +151,7 @@ body {
   width: 100%;
   z-index: 5;
   -webkit-transform: translateY(-100%);
-  -ms-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
       transform: translateY(-100%);
   -webkit-transition: -webkit-transform 0.3s ease-in-out;
   transition: -webkit-transform 0.3s ease-in-out;
@@ -160,7 +160,7 @@ body {
 }
 .main_header--fixed.is--active {
   -webkit-transform: translateY(0);
-  -ms-transform: translateY(0);
+      -ms-transform: translateY(0);
       transform: translateY(0);
 }
 .headerWrap {
@@ -170,11 +170,11 @@ body {
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  -webkit-align-items: center;
+          -webkit-align-items: center;
           align-items: center;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-  -webkit-justify-content: space-between;
+          -webkit-justify-content: space-between;
           justify-content: space-between;
   min-height: 100px;
 }
@@ -240,12 +240,7 @@ body {
 /* END HEADER */
 
 /* HERO BANNER  /  SLIDER */
-/* 
-@todo: remove after trainer content
-FOR PARALLAX TESTING */
-.main_content {
-  min-height: 150vh;
-}
+
 .js-slider {
   position: relative;
   overflow: hidden;
@@ -271,9 +266,10 @@ FOR PARALLAX TESTING */
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
       transform: translateY(-50%);
-  border-radius: 50%;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
   background-color: rgb(32, 32, 32);
   width: 40px;
   height: 40px;
@@ -330,7 +326,7 @@ FOR PARALLAX TESTING */
   top: 50%;
   left: 0;
   -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
       transform: translateY(-50%);
   margin-top: -17px;
 }
@@ -360,3 +356,127 @@ FOR PARALLAX TESTING */
 }
 
 /* END HERO BANNER  /  SLIDER */
+
+/* TRAINER SECTION */
+.trainer-section {
+  padding-top: 45px;
+  padding-bottom: 57px;
+  background: url(assets/trainer-bg.jpg) no-repeat center;
+  background-size: cover;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+.section-headline {
+  float: left;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 24px;
+  position: relative;
+  margin-bottom: 65px;
+}
+.section-headline:after {
+  content: " ";
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      transform: translateX(-50%);
+  width: 45px;
+  height: 1px;
+  background: #fff;
+}
+.trainer-wrap {
+  float: left;
+  width: 100%;
+}
+.trainer-item {
+  float: left;
+  width: 100%;
+}
+.trainer-item__thumb {
+  float: left;
+  height: 240px;
+  width: 100%;
+}
+.trainer-item__thumb img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.trainer-item__content {
+  background: white;
+  float: left;
+  width: 100%;
+  padding: 17px 20px 19px 20px;
+}
+.trainer-item h4,
+.trainer-item span {
+  float: left;
+  width: 100%;
+  text-transform: uppercase;
+}
+.trainer-item h4 {
+  font-size: 14px;
+  color: #202020;
+}
+.trainer-item span {
+  font-size: 12px;
+  color: #afafaf;
+}
+/* FLIP */
+.trainer-item {
+  -webkit-perspective: 700px;
+  perspective: 700px;
+}
+
+.flip-trainer {
+  float: left;
+  width: 100%;
+  position: relative;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  height: 315px;
+}
+
+.flip-trainer__front,
+.flip-trainer__back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-trainer__back {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  background: white;
+}
+
+.flip-trainer:hover {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+.flip-trainer__back {
+  padding: 27px 23px;
+}
+.flip-trainer__back span {
+  margin-bottom: 14px;
+}
+.flip-trainer__back p {
+  font-size: 13px;
+  font-family: "Open Sans", sans-serif;
+  color: #777;
+  line-height: 1.615em;
+  text-transform: none;
+}
+
+/* END TRAINER SECTION */

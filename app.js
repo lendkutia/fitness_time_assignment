@@ -5,7 +5,7 @@ jQuery(document).ready(function($) {
     doc = $(document),
     fixedHeader = $(".main_header--fixed"),
     bannerContent = $(".hero-banner-item__content");
-    
+
 
   /* NAV TOGGLE */
   navToggle.click(function(e) {
@@ -33,7 +33,7 @@ jQuery(document).ready(function($) {
     bannerContent.css({
       opacity: function() {
         var elementHeight = $(this).height();
-        return 1 + ((elementHeight - scrollTop) / elementHeight) * 2;
+        return 1 + ((elementHeight - scrollTop) / elementHeight) * 0.9;
       }
     });
   });
