@@ -480,3 +480,129 @@ body {
 }
 
 /* END TRAINER SECTION */
+/* RESPONSIVE */
+.nav-toggle {
+  float: right;
+  width: 35px;
+  background: transparent;
+  padding: 4px 0;
+  border: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.nav-toggle:focus {
+  outline: none;
+}
+
+.nav-toggle span {
+  float: left;
+  width: 100%;
+  margin-bottom: 6px;
+  height: 4px;
+  background: #fff;
+  -webkit-transition: all 0.3s cubic-bezier(0.3, 0, 0.2, 1);
+  transition: all 0.3s cubic-bezier(0.3, 0, 0.2, 1);
+}
+
+.nav-toggle span:last-child {
+  margin-bottom: 0;
+}
+
+.nav-toggle.is--active span {
+  background: #fff;
+}
+
+.nav-toggle.is--active span:nth-child(1) {
+  -webkit-transform: rotate(45deg) translate(7px, 7px);
+  -ms-transform: rotate(45deg) translate(7px, 7px);
+      transform: rotate(45deg) translate(7px, 7px);
+}
+
+.nav-toggle.is--active span:nth-child(2) {
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+}
+
+.nav-toggle.is--active span:nth-child(3) {
+  -webkit-transform: rotate(-45deg) translate(7px, -7px);
+  -ms-transform: rotate(-45deg) translate(7px, -7px);
+      transform: rotate(-45deg) translate(7px, -7px);
+}
+
+@media (max-width: 767px) {
+  .main_header {
+    height: 60px;
+  }
+  .nav-toggle {
+    display: block;
+  }
+  .headerWrap {
+    min-height: 60px;
+  }
+  .main-nav {
+    position: absolute;
+    top: 60px;
+    right: 15px;
+    width: 100%;
+    height: 100vh;
+    background: #202020;
+    z-index: 10;
+    padding: 30px 15px;
+    display: none;
+  }
+  .main-nav li {
+    float: left;
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  .main-nav a {
+    float: right;
+  }
+  .trainer-item {
+    margin-bottom: 30px;
+  }
+  .js-slider .prev-slide {
+    left: 5px;
+  }
+  .js-slider .next-slide {
+    right: 5px;
+  }
+  .hero-banner-item__content h1 {
+    font-size: 22px;
+  }
+  .hero-banner-item__content p {
+    font-size: 16px;
+  }
+  .js-slider,.slider-wrap,.slider-container {
+    -ms-touch-action: none;
+    touch-action: none;
+  }
+}
+@media (min-width: 768px) and (max-width: 990px) {
+  .logo {
+    float: left;
+    width: 120px;
+  }
+  .trainer-item {
+    margin-bottom: 30px;
+  }
+  .main-nav li {
+    margin-right: 10px;
+  }
+  .main-nav a {
+    font-size: 12px;
+  }
+  .js-slider,.slider-wrap,.slider-container {
+    -ms-touch-action: none;
+    touch-action: none;
+  }
+}
+@media (min-width: 991px) and (max-width: 1024px) {
+  .js-slider,.slider-wrap,.slider-container {
+    -ms-touch-action: none;
+    touch-action: none;
+  }
+}
+/* END RESPONSIVE */
