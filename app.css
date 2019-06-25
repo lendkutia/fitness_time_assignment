@@ -1,5 +1,4 @@
 /* RESET */
-/*! minireset.css v0.0.5 | MIT License | github.com/jgthms/minireset.css */
 html,
 body,
 p,
@@ -76,3 +75,161 @@ body {
   font-size: 14px;
 }
 /* END RESET */
+/* GENERAL */
+.container {
+  *zoom: 1;
+}
+
+.container:before,
+.container:after {
+  content: " ";
+  display: table;
+}
+
+.container:after {
+  clear: both;
+}
+.container {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 15px;
+}
+.column {
+  width: 25%;
+  padding-left: 15px;
+  padding-right: 15px;
+  min-height: 1px;
+  float: left;
+}
+.row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+@media (max-width: 767px) {
+  .column {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) and (max-width: 990px) {
+  .container {
+    max-width: 732px;
+  }
+  .column {
+    width: 50%;
+  }
+}
+
+@media (min-width: 991px) and (max-width: 1024px) {
+  .container {
+    max-width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+.block-section {
+  float: left;
+  width: 100%;
+  clear: both;
+}
+/* END GENERAL */
+/* HEADER */
+.main_header {
+  float: left;
+  width: 100%;
+  height: 100px;
+  background: #202020;
+}
+.main_header--fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 5;
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+.main_header--fixed.is--active {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+.headerWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 100px;
+}
+.nav-toggle {
+  display: none;
+}
+.main-nav {
+  margin-left: auto;
+  margin-right: -15px;
+}
+.main-nav li {
+  float: left;
+  margin-right: 22px;
+}
+.main-nav li:last-child {
+  margin-right: 0;
+}
+.main-nav a {
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  float: left;
+  padding: 6px 15px;
+  -webkit-transition: background 0.2s ease-in-out;
+  transition: background 0.2s ease-in-out;
+}
+.main-nav a:hover {
+  background: #e66868;
+}
+.current-menu-item a {
+  background: #e25050;
+}
+.contact-header {
+  position: absolute;
+  bottom: -37px;
+  right: 0;
+  z-index: 5;
+}
+
+.contact-header__icon {
+  content: " ";
+  background: url("assets/phone-icon.png") no-repeat center #bd4141;
+  width: 37px;
+  height: 37px;
+  float: left;
+  -webkit-transition: background 0.2s ease-in-out;
+  transition: background 0.2s ease-in-out;
+}
+.contact-header__link {
+  color: white;
+  background: #e25050;
+  text-decoration: none;
+  padding: 8px 27px;
+  float: left;
+  -webkit-transition: background 0.2s ease-in-out;
+  transition: background 0.2s ease-in-out;
+}
+
+.contact-header:hover .contact-header__icon,
+.contact-header:hover .contact-header__link {
+  background-color: #e25050;
+}
+/* END HEADER */
